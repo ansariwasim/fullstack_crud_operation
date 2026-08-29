@@ -35,11 +35,11 @@ let result =  await imageKitUpload(req.file.buffer)
 
 })
 
-
+// Patching all postdata
 app.get('/posts', async(req,res)=>{
 
   const allPost =  await postModel.find()
-  console.log(allPost)
+
 
   res.status(200).json({
     message: "Patching all post",
